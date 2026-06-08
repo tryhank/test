@@ -1,0 +1,35 @@
+export default {
+  common: {
+    home: "首页",
+    language: "语言",
+    theme: "主题",
+    light: "浅色",
+    dark: "深色",
+    system: "跟随系统",
+    goBack: "返回",
+    tryAgain: "重试",
+    notFound: "您访问的页面不存在。",
+  },
+  home: {
+    title: "TanStack Starter",
+    subtitle: "一个简约、生产可用的现代 Web 应用模板。",
+    techStack: "React 19 + TanStack Start + Tailwind CSS v4 + Vite 8",
+  },
+  features: {
+    tanstackStart: "TanStack Start",
+    tanstackStartDesc: "全栈 React 框架，支持 SSR、文件路由和服务端函数。",
+    shadcnUi: "shadcn/ui + Tailwind",
+    shadcnUiDesc: "精美、无障碍的组件库，配合 Tailwind CSS v4 和 CSS 变量主题系统。",
+    i18n: "国际化支持",
+    i18nDesc: "支持多语言路由和语言切换的国际化方案。",
+    webVitals: "Web Vitals",
+    webVitalsDesc: "内置性能监控，追踪 CLS、FCP、INP、LCP 和 TTFB 指标。",
+    envValidation: "类型安全环境变量",
+    envValidationDesc: "使用 Zod Schema 校验服务端和客户端环境变量。",
+    cloudflare: "Cloudflare 就绪",
+    cloudflareDesc: "支持部署到 Cloudflare Workers，SSR 和服务端函数开箱即用。",
+  },
+  footer: {
+    builtWith: "基于",
+  },
+} as const;
