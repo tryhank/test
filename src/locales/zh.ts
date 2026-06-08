@@ -26,8 +26,8 @@ export default {
     webVitalsDesc: "内置性能监控，追踪 CLS、FCP、INP、LCP 和 TTFB 指标。",
     envValidation: "类型安全环境变量",
     envValidationDesc: "使用 Zod Schema 校验服务端和客户端环境变量。",
-    cloudflare: "Cloudflare 就绪",
-    cloudflareDesc: "支持部署到 Cloudflare Workers，SSR 和服务端函数开箱即用。",
+    server: "服务器部署",
+    serverDesc: "支持 Node 服务器部署，SSR 和服务端函数开箱即用。",
   },
   footer: {
     builtWith: "基于",

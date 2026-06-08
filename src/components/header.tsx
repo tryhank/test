@@ -2,12 +2,11 @@ import { RiMenuLine, RiCloseLine } from "@remixicon/react";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
-import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { type Locale, useTranslations } from "@/lib/i18n";
+import { useTranslations } from "@/lib/i18n";
 
-export function Header({ onLocaleChange }: { onLocaleChange?: (locale: Locale) => void }) {
+export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t } = useTranslations();
 
@@ -17,7 +16,7 @@ export function Header({ onLocaleChange }: { onLocaleChange?: (locale: Locale) =
     <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link to="/" className="text-lg font-bold">
-          TanStack Starter
+          足球数据
         </Link>
 
         {/* Desktop nav */}
@@ -33,13 +32,11 @@ export function Header({ onLocaleChange }: { onLocaleChange?: (locale: Locale) =
               {item.label}
             </Link>
           ))}
-          <LanguageSwitcher onLocaleChange={onLocaleChange} />
           <ThemeToggle />
         </nav>
 
         {/* Mobile menu button */}
         <div className="flex items-center gap-2 md:hidden">
-          <LanguageSwitcher onLocaleChange={onLocaleChange} />
           <ThemeToggle />
           <Button variant="ghost" size="icon" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <RiCloseLine className="h-5 w-5" /> : <RiMenuLine className="h-5 w-5" />}

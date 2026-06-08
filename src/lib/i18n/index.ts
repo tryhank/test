@@ -5,7 +5,7 @@ import zh from "@/locales/zh";
 
 export const locales = ["en", "zh"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
+export const defaultLocale: Locale = "zh";
 
 type DeepStringify<T> = {
   readonly [K in keyof T]: T[K] extends string ? string : DeepStringify<T[K]>;
@@ -27,7 +27,7 @@ export const I18nContext = createContext<{
   messages: Messages;
 }>({
   locale: defaultLocale,
-  messages: en,
+  messages: zh,
 });
 
 export function useTranslations() {

@@ -189,7 +189,7 @@ export default {
 
 环境文件优先级：`.env`（开发）> `.env.example`（文档）。`.env` 已 gitignore。
 
-> **Cloudflare Workers 注意：** Workers 无 `process.env`，部署时使用 `wrangler.jsonc` 中的 `vars` 或 `wrangler secret put`。
+> **服务器部署注意：** 服务端变量通过 `.env` / `.env.local` 或进程环境变量读取；敏感信息不要提交到 Git。
 
 ## 主题系统
 

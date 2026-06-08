@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 pnpm dev              # Dev server on http://localhost:3000
 pnpm build            # Production build (Nitro)
-pnpm build:cloudflare # Production build (Cloudflare Workers) — uses BUILD_TARGET=cloudflare
+pnpm build # Production build (Node server)
 pnpm preview          # Preview production build locally
 pnpm lint             # Oxlint with type-aware checking
 pnpm lint:fix         # Oxlint with auto-fix

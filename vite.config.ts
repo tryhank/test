@@ -5,8 +5,6 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-const isCloudflare = process.env.BUILD_TARGET === "cloudflare";
-
 export default defineConfig(async () => {
   const plugins = [
     devtools(),
@@ -18,13 +16,8 @@ export default defineConfig(async () => {
     tailwindcss(),
   ];
 
-  if (isCloudflare) {
-    const { cloudflare } = await import("@cloudflare/vite-plugin");
-    plugins.unshift(cloudflare({ viteEnvironment: { name: "ssr" } }));
-  } else {
-    const { nitro } = await import("nitro/vite");
-    plugins.splice(2, 0, nitro());
-  }
+  const { nitro } = await import("nitro/vite");
+  plugins.splice(2, 0, nitro());
 
   return {
     resolve: {

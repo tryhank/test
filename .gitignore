@@ -9,8 +9,13 @@ node_modules
 .DS_Store
 .cache
 .env
+.env.local
+.env.*.local
+.secret*
+.secrets*
 
 .data
+data
 .vercel
 .output
 .wrangler

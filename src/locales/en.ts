@@ -29,8 +29,8 @@ export default {
     envValidation: "Type-Safe Env",
     envValidationDesc:
       "Environment variable validation with Zod schemas for both server and client.",
-    cloudflare: "Cloudflare Ready",
-    cloudflareDesc: "Deploy to Cloudflare Workers with SSR and server functions support.",
+    server: "Server Ready",
+    serverDesc: "Deploy to a Node server with SSR and server functions support.",
   },
   footer: {
     builtWith: "Built with",

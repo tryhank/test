@@ -1,4 +1,4 @@
-# This _headers file works for Netlify and Cloudflare. For other providers, you may want to configure these headers yourself, depending on your setup.
+# This _headers file works for static hosts that support the Netlify-style headers format.
 
 # TanStack Start generated assets (hash-based filenames)
 /assets/*
